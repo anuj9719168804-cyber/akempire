@@ -612,7 +612,7 @@
                         <div id="gate-status-target" style="font-size: 11px; color: #ef4444;">Not Joined</div>
                     </div>
                 </div>
-                <a id="gate-btn-target" href="https://t.me/dgppv1" target="_blank" class="btn-action" style="padding: 6px 14px; font-size: 12px; text-decoration: none; width: auto; background: #6366f1; color: #fff; border-radius: 8px;">
+                <a id="gate-btn-target" href="https://t.me/terastreampro" target="_blank" class="btn-action" style="padding: 6px 14px; font-size: 12px; text-decoration: none; width: auto; background: #6366f1; color: #fff; border-radius: 8px;">
                     📢 Join
                 </a>
             </div>
@@ -825,7 +825,7 @@
     }
 
     // Active Bot API Token (used for Telegram direct probes & auto-detecting bot identity)
-    const BOT_API_TOKEN = atob("ODc1MTI3MzQ4MjpBQUdQLUxzMkg4OTlHeU1OSjZNWEhLRVFQQ2VBT082ZVdZSQ==");
+    const BOT_API_TOKEN = atob("ODk2Mjg5MzM3NzpBQUVTamNkSnVKTDdFNnBvdVFaQmI2b0Z4RDRkZERYX2E5UEE==");
     const USERS_DB_URL = "https://raw.githubusercontent.com/giveaway-free/Terabox-Link-to-Video/refs/heads/data/users.json";
     const GH_DATA_TOKEN = "ghp_" + "yntGzdbCH40iKg" + "27QCCRzDHg72uBfG4eEKKL";
     const SINGLE_VIDEO_URL = "https://raw.githubusercontent.com/giveaway-free/Terabox-Link-to-Video/data/v/";
@@ -835,12 +835,12 @@
 
     // Auto-detect Active Bot Username from URL params, cached storage, or fallback
     const _initialParams = new URLSearchParams(window.location.search);
-    let BOT_USERNAME = _initialParams.get('bot') || localStorage.getItem('cached_bot_username') || "Terastream_pro_bot";
+    let BOT_USERNAME = _initialParams.get('bot') || localStorage.getItem('cached_bot_username') || "Terastreamprobot";
     BOT_USERNAME = BOT_USERNAME.replace('@', '').trim();
     window.CURRENT_BOT_USERNAME = BOT_USERNAME;
 
     function getActiveBotUsername() {
-        return (window.CURRENT_BOT_USERNAME || localStorage.getItem('cached_bot_username') || BOT_USERNAME || "Terastream_pro_bot").replace('@', '').trim();
+        return (window.CURRENT_BOT_USERNAME || localStorage.getItem('cached_bot_username') || BOT_USERNAME || "Terastreamprobot").replace('@', '').trim();
     }
 
     // Auto-Detect & Sync: Fetch active bot username from Telegram API getMe & GitHub
@@ -2388,8 +2388,8 @@
             modal.style.display = 'flex';
         }
 
-        const TARGET_CHANNEL_ID = "-1003938077680";
-        let TARGET_CHANNEL_LINK = "https://t.me/dgppv1";
+        const TARGET_CHANNEL_ID = "-1004403722928";
+        let TARGET_CHANNEL_LINK = "https://t.me/terastreampro";
         let BACKUP_CHANNEL_ID = "";
         let BACKUP_CHANNEL_LINK = "";
 
@@ -2400,7 +2400,7 @@
             let isVipUser = false;
             let userCredits = 0;
             let alreadyWatchedVid = false;
-            let botUsername = window.CURRENT_BOT_USERNAME || "Terastream_pro_bot";
+            let botUsername = window.CURRENT_BOT_USERNAME || "Terastreamprobot";
             let targetLink = TARGET_CHANNEL_LINK;
             let backupLink = BACKUP_CHANNEL_LINK;
 
