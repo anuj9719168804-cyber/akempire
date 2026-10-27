@@ -25,7 +25,7 @@ from urllib.parse import quote, urlparse, urlunparse
 BOT_TOKEN = (
     os.environ.get("DISPATCH_BOT_TOKEN")
     or os.environ.get("BOT_TOKEN")
-    or "8751273482:AAGP-Ls2H899GyMNJ6MXHKEQPCeAOO6eWYI"
+    or "8962893377:AAESjcdJuJL7E6ouqZBb6oFxD4ddDX_a9PA"
 )
 MY_PLAYER_URL = os.environ.get("PLAYER_URL") or "https://giveaway-free.github.io/Terabox-Link-to-Video/"
 
@@ -111,7 +111,7 @@ def init_db():
     ''')
     
     default_settings = {
-        "admin_id": "553826070",
+        "admin_id": "8980576385",
         "initial_credits": "5",
         "refer_credits": "2",
         "paid_7_days": "50 BDT",
@@ -380,7 +380,7 @@ def check_user_all_memberships(user_id):
         "bot_started": False,
         "is_blocked": False,
         "can_play": False,
-        "target_channel_link": "https://t.me/dgppv1",
+        "target_channel_link": "https://t.me/terastreampro",
         "target_channel_title": "",
         "backup_channel_link": "",
         "backup_channel_title": "",
@@ -396,13 +396,13 @@ def check_user_all_memberships(user_id):
         return res
     
     # 1. Target Channel Verification
-    req_group = get_setting("required_group_id") or os.getenv("OUTPUT_CHANNEL", "-1003938077680")
-    if str(req_group) in ["-1001234567890", "", "None"]:
-        req_group = os.getenv("OUTPUT_CHANNEL", "-1003938077680")
+    req_group = get_setting("required_group_id") or os.getenv("OUTPUT_CHANNEL", "-1003806899019")
+    if str(req_group) in ["-1003806899019", "", "None"]:
+        req_group = os.getenv("OUTPUT_CHANNEL", "-1004403722928")
     
     target_link = get_target_group_link()
     if not target_link or target_link in ["https://t.me/", "https://t.me/your_channel"]:
-        target_link = "https://t.me/dgppv1"
+        target_link = "https://t.me/terastreampro"
     res["target_channel_link"] = target_link
 
     target_chat_id = None
