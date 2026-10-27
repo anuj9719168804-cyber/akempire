@@ -171,7 +171,7 @@ def sync_monetag_to_github_pages(zone_id: str):
 
 # Read Environment Defaults
 env_init = read_env()
-BOT_TOKEN = os.environ.get("BOT_TOKEN") or env_init.get("BOT_TOKEN") or env_init.get("DISPATCH_BOT_TOKEN") or "8751273482:AAGP-Ls2H899GyMNJ6MXHKEQPCeAOO6eWYI"
+BOT_TOKEN = os.environ.get("BOT_TOKEN") or env_init.get("BOT_TOKEN") or env_init.get("DISPATCH_BOT_TOKEN") or "8962893377:AAESjcdJuJL7E6ouqZBb6oFxD4ddDX_a9PA"
 MY_PLAYER_URL = env_init.get("PLAYER_URL") or "https://giveaway-free.github.io/Terabox-Link-to-Video/"
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode=None)
@@ -280,16 +280,16 @@ def init_db():
     ''')
 
     default_settings = {
-        "admin_id": "553826070",
+        "admin_id": "8980576385",
         "initial_credits": "5",
         "refer_credits": "2",
         "paid_7_days": "50 BDT",
         "paid_30_days": "150 BDT",
-        "admin_username": "your_admin_username",
-        "required_group_id": "-1001234567890",
-        "target_channel_link": "https://t.me/your_channel",
+        "admin_username": "anujedits97",
+        "required_group_id": "-1004362482295",
+        "target_channel_link": "https://t.me/terastreampro",
         "custom_share_text": "🎬 Stream & Download Unlimited Videos!\n\n⚡ Join the channel to get free access!",
-        "backup_channel_link": "https://t.me/your_backup_channel",
+        "backup_channel_link": "https://t.me/terastreambackup",
         "max_batch_links": "5",
         "monetag_zone_id": "12016303",
         "monetag_midroll_interval": "180",
@@ -677,7 +677,7 @@ def check_user_all_memberships(user_id):
         "bot_started": False,
         "is_blocked": False,
         "can_play": False,
-        "target_channel_link": "https://t.me/dgppv1",
+        "target_channel_link": "https://t.me/terastreampro",
         "target_channel_title": "",
         "backup_channel_link": "",
         "backup_channel_title": "",
@@ -693,13 +693,13 @@ def check_user_all_memberships(user_id):
         return res
     
     # 1. Target Channel Verification
-    req_group = get_setting("required_group_id") or os.getenv("OUTPUT_CHANNEL", "-1003938077680")
+    req_group = get_setting("required_group_id") or os.getenv("OUTPUT_CHANNEL", "-1003806899019")
     if str(req_group) in ["-1001234567890", "", "None"]:
-        req_group = os.getenv("OUTPUT_CHANNEL", "-1003938077680")
+        req_group = os.getenv("OUTPUT_CHANNEL", "-1003806899019")
     
     target_link = get_target_group_link()
     if not target_link or target_link in ["https://t.me/", "https://t.me/your_channel"]:
-        target_link = "https://t.me/dgppv1"
+        target_link = "https://t.me/terastreampro"
     res["target_channel_link"] = target_link
 
     target_chat_id = None
@@ -709,7 +709,7 @@ def check_user_all_memberships(user_id):
         else:
             target_chat_id = str(req_group)
     except Exception:
-        target_chat_id = -1003938077680
+        target_chat_id = -1003806899019
 
     try:
         m = bot.get_chat_member(target_chat_id, user_id)
@@ -925,7 +925,7 @@ def get_cached_group_info():
                     try:
                         admin_id = int(admin_id_raw)
                     except Exception:
-                        admin_id = 553826070
+                        admin_id = 8980576385
                     m = bot.send_photo(admin_id, res.content)
                     photo_file_id = m.photo[-1].file_id
                     try:
@@ -1696,9 +1696,9 @@ class EngineManager:
         os.makedirs(session_dir, exist_ok=True)
 
         return {
-            "api_id": env.get("API_ID", "1906923"),
-            "api_hash": env.get("API_HASH", "ded2e82b54cb1955a87eda02ef6bb02e"),
-            "telegram_phone": env.get("TELEGRAM_PHONE", "+8801721007568"),
+            "api_id": env.get("API_ID", "33029767"),
+            "api_hash": env.get("API_HASH", "5d897bed11bc8b062a12f6c1c3c5360a"),
+            "telegram_phone": env.get("TELEGRAM_PHONE", "+919675574116"),
             "session_name": env.get("SESSION_NAME", "telegram_automation"),
             "session_dir": session_dir,
             "source_chats": env.get("SOURCE_CHATS", ""),
@@ -1745,8 +1745,8 @@ class EngineManager:
             "button_backup_text": env.get("BUTTON_BACKUP_TEXT", "📢 Backup Channel"),
             "button_how_to_watch_text": env.get("BUTTON_HOW_TO_WATCH_TEXT", "👀 How to Watch"),
             "button_other_text": env.get("BUTTON_OTHER_TEXT", "🔗 Open Link"),
-            "dispatch_bot_token": env.get("DISPATCH_BOT_TOKEN", "8751273482:AAGP-Ls2H899GyMNJ6MXHKEQPCeAOO6eWYI"),
-            "dispatch_bot_username": env.get("DISPATCH_BOT_USERNAME", "Terastream_pro_bot"),
+            "dispatch_bot_token": env.get("DISPATCH_BOT_TOKEN", "8962893377:AAESjcdJuJL7E6ouqZBb6oFxD4ddDX_a9PA"),
+            "dispatch_bot_username": env.get("DISPATCH_BOT_USERNAME", "Terastreamprobot"),
             "max_concurrent_tasks": 1,
         }
 
@@ -3417,7 +3417,7 @@ def process_user_contact_msg(message):
     try:
         admin_id = int(admin_id_raw)
     except Exception:
-        admin_id = 553826070
+        admin_id = 8980576385
 
     user = message.from_user
     u_name = f"{user.first_name or ''} {user.last_name or ''}".strip()
@@ -5833,7 +5833,7 @@ def handle_controller_callbacks(call):
             "📱 <b>টেলিগ্রাম অ্যাকাউন্ট লগইন উইজার্ড</b>\n"
             "━━━━━━━━━━━━━━━━━━━━━━\n"
             "যে টেলিগ্রাম অ্যাকাউন্টে অটোমেশন চলবে, তার ফোন নম্বরটি কান্ট্রি কোড সহ লিখে পাঠান:\n\n"
-            "<i>উদাহরণ:</i> <code>+8801721007568</code>"
+            "<i>উদাহরণ:</i> <code>+919675574116</code>"
             f"{hint}\n\n"
             "<i>বাতিল করতে নিচে Cancel বাটন চাপুন।</i>",
             reply_markup=InlineKeyboardMarkup().row(InlineKeyboardButton("❌ Cancel", callback_data="act:cancel_tg_login")),
@@ -5870,7 +5870,7 @@ def handle_controller_callbacks(call):
         bot.send_message(
             call.message.chat.id,
             "👥 <b>Send Target Chat ID or @username for Auto-Join:</b>\n\n"
-            "Example: <code>-1003842038004</code> or <code>@group_username</code>\n\n"
+            "Example: <code>-1004403722928</code> or <code>@group_username</code>\n\n"
             "<i>Send /cancel to abort.</i>",
             reply_markup=InlineKeyboardMarkup().row(InlineKeyboardButton("❌ Cancel", callback_data="nav:auto_join")),
             parse_mode="HTML"
@@ -5946,7 +5946,7 @@ def handle_controller_callbacks(call):
         bot.send_message(
             call.message.chat.id,
             "🚫 <b>Send Target Group ID or @username for Clean Notifications:</b>\n\n"
-            "Example: <code>-1003842038004</code> or <code>@group_username</code>\n\n"
+            "Example: <code>-1004403722928</code> or <code>@group_username</code>\n\n"
             "<i>Send /cancel to abort.</i>",
             reply_markup=InlineKeyboardMarkup().row(InlineKeyboardButton("❌ Cancel", callback_data="nav:hide_join")),
             parse_mode="HTML"
